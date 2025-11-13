@@ -55,8 +55,8 @@ Cypress.Commands.add('loginGlobalUser', (institucionKey, tipoUsuario) => {
     
     cy.session(`sesion ${institucionKey} - usuario ${tipoUsuario}`, () => {
         cy.visit(loginUrl)
-        cy.get('#NombreUsuario').clear().type(usuario);
-        cy.get('#Contrasena').clear().type(contrasenia);
+        cy.get('#NombreUsuario').clear().type(usuario, {delay: 50});
+        cy.get('#Contrasena').clear().type(contrasenia, {delay: 50});
         cy.intercept('GET', 'https://site2.q10.com/').as('InicioSesion');
         cy.get('#submit-btn').click();
         cy.wait('@InicioSesion');

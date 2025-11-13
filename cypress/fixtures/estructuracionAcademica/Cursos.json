@@ -1,0 +1,18 @@
+{
+    "Curso": {
+        "Base": {
+            "Codigo": "PR001",
+            "Nombre": "Curso BDD",
+            "SedeJornada": "Principal - Mañana",
+            "Programa": "Programa BDD",
+            "Pensum": "Pensum BDD",
+            "Asignatura": "Asignatura BDD",
+            "Periodo": "Periodo BDD"
+
+        },
+        "Editar": {
+            "Codigo": "PR002",
+            "Nombre": "Curso BDD - Editado"
+        }
+    }
+}
