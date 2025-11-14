@@ -1,7 +1,7 @@
 export default class CursosPage {
 
     static abrirModalCrearCurso() {
-        cy.get('a[title="Crear cursos"]').click();
+        cy.get('a[title="Crear curso"]').click();
         return cy.get('#form0');
     }
 

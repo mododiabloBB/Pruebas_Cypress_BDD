@@ -9,15 +9,15 @@ Feature: Gestión de cursos
 
     Scenario Outline: Validacción de creación y edición de cursos
         And El usuario hace clic en <Accion>
-        And El usuario completa los campos del modal para '<Accion>'
-        And El usuario envía el formulario y se muestra una aletar de éxito <Alerta>
-        Then El producto se crea exitosamente en la plataforma
+        And El usuario completa los campos del modal para <Accion>
+        And El usuario envía el formulario y se muestra una aletar exitosa por la modificación
+        Then La <Accion> ejecutada se guardar de forma correcta en la plataforma
 
 
-    Example:
-            | Accion | Alerta                                  |
-            | Crear  | El registro fue creados exitosamente    |
-            | Editar | El registro fue modificado exitosamente |
+    Examples:
+            | Accion |
+            | Crear  |
+            | Editar | 
 
     Scenario: Eliminación exitosa de un curso
         And El usuario busca el curso editado "Curso BDD - Editado"

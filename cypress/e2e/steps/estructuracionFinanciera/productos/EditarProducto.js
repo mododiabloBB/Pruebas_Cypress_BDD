@@ -24,6 +24,6 @@ When('El usuario cambia los datos del producto modificando los siguientes campos
 Then('El producto se edita exitosamente en la plataforma', () => {
     // IMPORTAR APIS PARA VALIDAR
     cy.get("@datosProductoEditado").then((data) => {
-        ProductosApi.validarApiEditarProducto(data["Código"], data["Nombre"], data["Impuesto"]);
+        ProductosApi.validarApiEditarProducto(data["Código"], data["Nombre"]);
     });
 });

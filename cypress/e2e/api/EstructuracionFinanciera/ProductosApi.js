@@ -25,7 +25,7 @@ export default class ProductosApi {
         })
     }
 
-    static validarApiEditarProducto(codigo, nombre, impuesto) {
+    static validarApiEditarProducto(codigo, nombre, valor) {
         this.consumoApiCrearProducto(codigo).then((res) => {
             expect(res.status).to.eq(200);
             expect(res.body.Nombre).to.eq(nombre);
