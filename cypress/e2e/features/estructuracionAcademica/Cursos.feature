@@ -21,5 +21,5 @@ Feature: Gestión de cursos
 
     Scenario: Eliminación exitosa de un curso
         And El usuario busca el curso editado "Curso BDD - Editado"
-        And El usuario hace clic en la acción de eliminar asignatura
+        And El usuario hace clic en la acción de "Eliminar" asignatura
         Then El usuario acepta la eliminación y se muestra una aletar de éxito "El registro fue eliminado exitosamente"

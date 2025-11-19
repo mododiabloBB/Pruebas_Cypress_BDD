@@ -9,10 +9,8 @@ When('El usuario hace clic en {word}', (Accion) => {
     if (Accion === "Crear") {
         CursosPage.abrirModalCrearCurso().should('be.visible')
     } else {
-        cy.get('@nombreProducto').then((NombreCurso) => {
-            cy.buscarRegistroTabla(NombreCurso);
-            cy.presionarAccionRegistroTabla(NombreCurso, Accion);
-        });
+            cy.buscarRegistroTabla(Base.Nombre);
+            cy.presionarAccionRegistroTabla(Base.Nombre, Accion);
     }
 });
 
@@ -28,8 +26,6 @@ When('El usuario completa los campos del modal para {word}', (Accion) => {
         cy.wrap(Base.Nombre).as('nombreProducto');
         cy.get('#Grupo_plaaca_fecha_fin').should('not.have.value', '');
     } else {
-        cy.buscarRegistroTabla(Base.Nombre);
-        cy.presionarAccionRegistroTabla(nombreProducto, Accion);
         CursosPage.completarCampo('#Grupo_plaaca_codigo', Editar.Codigo).should('have.value', Editar.Codigo);
         CursosPage.completarCampo('#Grupo_plaaca_nombre', Editar.Nombre).should('have.value', Editar.Nombre);
     }
